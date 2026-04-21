@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../Robotics-Training/src"
+		},
+		{
+			"name": "RobotArm",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
