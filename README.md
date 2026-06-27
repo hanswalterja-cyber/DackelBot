@@ -11,14 +11,14 @@ Schließe alle Komponenten genau nach dieser Liste an einem Arduino Uno an.
 
 ### 📍 Die Digital-Pins (Rechte Pin-Leiste auf dem Uno):
 
-**Servo (Ohren)** - Signal -> **Pin 2**
-**RGB LED (Auge - Rot)** - Signal -> **Pin 3**
-**Servo (Schwanz)** - Signal -> **Pin 4**
-**RGB LED (Auge - Grün)** - Signal -> **Pin 5**
-**RGB LED (Auge - Blau)** - Signal -> **Pin 6**
-**Buzzer (Summer)** - Signal -> **Pin 8**
-**Ultraschallsensor** - Trigger (Trig) -> **Pin 9**
-**Ultraschallsensor** - Echo -> **Pin 10**
+**Servo (Ohren)** - Signal -> **Pin 2**; 
+**RGB LED (Auge - Rot)** - Signal -> **Pin 3**; 
+**Servo (Schwanz)** - Signal -> **Pin 4**; 
+**RGB LED (Auge - Grün)** - Signal -> **Pin 5**; 
+**RGB LED (Auge - Blau)** - Signal -> **Pin 6**; 
+**Buzzer (Summer)** - Signal -> **Pin 8**; 
+**Ultraschallsensor** - Trigger (Trig) -> **Pin 9**; 
+**Ultraschallsensor** - Echo -> **Pin 10**; 
 
 
 ## 🎭 Verhalten des Dackels (Je nach Abstand)
