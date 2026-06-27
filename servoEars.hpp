@@ -3,7 +3,7 @@
 
 Servo myservo_ears; //Create object of Servo class
 
-const int servoPin = 9;
+const int servoPin = 2;
 
 void setupServoEars(){
     myservo_ears.attach(servoPin); //same as pinMode but for servo class

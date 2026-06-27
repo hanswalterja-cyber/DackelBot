@@ -8,41 +8,39 @@ void setupBuzzer(){
 }
 
 void surprised(){
-    tone(buzzerPin, 1200, 80); //tone has pin, frequency and duration as parameters
-    delay(300);
-    tone(buzzerPin, 1400, 80);
-    noTone(buzzerPin); //noTone = no tone (obvious, right?)
+    // High-tone alert with a quick double bark
+    tone(buzzerPin, 1000, 70);
+    delay(100);
+    tone(buzzerPin, 1200, 70);
+    delay(100);
+    noTone(buzzerPin);
 }
 
 void happy(){
-    for(int i = 0; i < 5; i++){
-        tone(buzzerPin, 600, 60);
-        delay(300);
+    // Short happy bark sequence
+    for(int i = 0; i < 3; i++){
+        tone(buzzerPin, 700, 90);
+        delay(120);
+        noTone(buzzerPin);
+        delay(80);
     }
-    
-
-    noTone(buzzerPin);  
 }
 
 void sad(){
-    tone(buzzerPin, 700, 100);
-    for(int j = 0; j < 3; j++){
-        for(int i = 695; i > 600; i -= 5){
-            tone(buzzerPin, i, 20);
-            delay(20);
-        } 
+    // Low whining tone that falls slowly
+    for (int freq = 900; freq >= 600; freq -= 50) {
+        tone(buzzerPin, freq, 120);
+        delay(150);
     }
     noTone(buzzerPin);
 }
 
 void angry(){
-    for (int i = 0; i < 10; i++) {
-        tone(buzzerPin, 150); 
-        delay(20);
-        tone(buzzerPin, 170);
-        delay(20);
+    // Low growl/pulse pattern
+    for (int i = 0; i < 4; i++) {
+        tone(buzzerPin, 300, 160);
+        delay(180);
+        noTone(buzzerPin);
+        delay(100);
     }
-    noTone(buzzerPin);
 }
-
-

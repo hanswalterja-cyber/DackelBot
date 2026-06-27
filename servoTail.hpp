@@ -11,20 +11,25 @@ void setupServoWagging(){
 }
 
 
-void waggingTail(int max_angle, int min_angle, int freq){
-    float stepDelay = (1000.0 / freq / 2.0) / (max_angle - min_angle); //1000 / freq / 2 -> Time for movement in one direction
+void waggingTail(int min_angle, int max_angle, int freq){
+    if (freq <= 0 || max_angle <= min_angle) {
+        myservoWagging.write(min_angle);
+        return;
+    }
 
-    // 2. Move Forward
+    float stepDelay = (1000.0 / freq / 2.0) / (max_angle - min_angle); // time per step in ms
+
+    // Move forward
     for (int pos = min_angle; pos <= max_angle; pos++) {
-      myservoWagging.write(pos);
-      delay(stepDelay); 
-  }
+        myservoWagging.write(pos);
+        delay(stepDelay);
+    }
 
-    // 3. Move Backward
+    // Move backward
     for (int pos = max_angle; pos >= min_angle; pos--) {
-      myservoWagging.write(pos);
-      delay(stepDelay);
-  }
+        myservoWagging.write(pos);
+        delay(stepDelay);
+    }
 }
 
 void setTail(int angle){

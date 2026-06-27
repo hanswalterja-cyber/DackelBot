@@ -1,8 +1,10 @@
+#pragma once
 #include <Arduino.h>
 
-const int redPin = 6;
+// Pin mapping: (red=3, green=5, blue=6)
+const int redPin = 3;
 const int greenPin = 5;
-const int bluePin = 3;
+const int bluePin = 6;
 
 void setupLED(){
     pinMode(redPin, OUTPUT);
