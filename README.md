@@ -5,21 +5,20 @@ Dieses Projekt erweckt einen kleinen Dackel aus Klemmbausteinen zum Leben! Über
 
 ## 🔌 Anschluss-Plan (Arduino Uno Pinbelegung)
 
-Verkapple die Komponenten genau nach dieser Liste mit deinem Arduino Uno. 
+Schließe alle Komponenten genau nach dieser Liste an einem Arduino Uno an. 
 
 *Hinweis für die Stromversorgung: Alle Komponenten mit GND (Masse/Minus) und alle mit 5V (Plus) verbinden.*
 
 ### 📍 Die Digital-Pins (Rechte Pin-Leiste auf dem Uno):
 
- Am Bauteil                 Kabel-Funktion          Steckplatz am Arduino Uno
-**Servo (Ohren)**           Signal (gelb/orange)    **Pin 2**
-**RGB LED (Auge - Rot)**    Signal                  **Pin 3**
-**Servo (Schwanz)**         Signal (gelb/orange)    **Pin 4**
-**RGB LED (Auge - Grün)**   Signal                  **Pin 5**
-**RGB LED (Auge - Blau)**   Signal                  **Pin 6**
-**Buzzer (Summer)**         Signal / IO             **Pin 8**
-**Ultraschallsensor**       Trigger (Trig)          **Pin 9**
-**Ultraschallsensor**       Echo                    **Pin 10**
+**Servo (Ohren)** - Signal -> **Pin 2**
+**RGB LED (Auge - Rot)** - Signal -> **Pin 3**
+**Servo (Schwanz)** - Signal -> **Pin 4**
+**RGB LED (Auge - Grün)** - Signal -> **Pin 5**
+**RGB LED (Auge - Blau)** - Signal -> **Pin 6**
+**Buzzer (Summer)** - Signal -> **Pin 8**
+**Ultraschallsensor** - Trigger (Trig) -> **Pin 9**
+**Ultraschallsensor** - Echo -> **Pin 10**
 
 
 ## 🎭 Verhalten des Dackels (Je nach Abstand)
