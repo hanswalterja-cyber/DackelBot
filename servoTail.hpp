@@ -10,7 +10,6 @@ void setupServoWagging(){
     myservoWagging.attach(servoPinTailWagging);
 }
 
-
 void waggingTail(int min_angle, int max_angle, int freq){
     if (freq <= 0 || max_angle <= min_angle) {
         myservoWagging.write(min_angle);
