@@ -10,5 +10,5 @@ void setupServoEars(){
 }
 
 void setServoEars(int angle){
-    myservo_ears.write(angle); //set angle ranging vom 0 to 180 degrees 
+    myservo_ears.write(angle); //set angle ranging vom 0 to 180 degrees
 }
