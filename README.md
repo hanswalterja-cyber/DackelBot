@@ -1,30 +1,50 @@
-# 🤖 Interaktiver Klemmbaustein-Dackel 
+# 🤖 Interactive Brick PawPal
 
-Dieses Projekt erweckt einen kleinen Dackel aus Klemmbausteinen zum Leben! Über einen Ultraschallsensor misst er den Abstand zu dir und reagiert mit verschiedenen Emotionen (Bellen, Schwanzwedeln, Ohren bewegen und leuchtenden Augen).
+This project brings a small brick-built dog named **PawPal** to life! Using an ultrasonic sensor, it measures the distance to you and reacts dynamically with different emotions (barking, tail wagging, ear movements, and glowing eyes).
 
+## 🔌 Connection Diagram (Arduino Uno Pinout)
 
-## 🔌 Anschluss-Plan (Arduino Uno Pinbelegung)
+Connect all components to your Arduino Uno exactly according to this list. 
 
-Schließe alle Komponenten genau nach dieser Liste an einem Arduino Uno an. 
+*Note for power supply: Connect all components to **GND** (Ground/Minus) and all of them to **5V** (Positive/Plus).*
 
-*Hinweis für die Stromversorgung: Alle Komponenten mit GND (Masse/Minus) und alle mit 5V (Plus) verbinden.*
+### 📍 Digital Pins (Right Pin Header on the Uno):
 
-### 📍 Die Digital-Pins (Rechte Pin-Leiste auf dem Uno):
+**Servo (Ears)** - Signal -> **Pin 2** ; 
+**RGB LED (Eye - Red)** - Signal -> **Pin 3** ; 
+**Servo (Tail)** - Signal -> **Pin 4** ; 
+**RGB LED (Eye - Green)** - Signal -> **Pin 5** ; 
+**RGB LED (Eye - Blue)** - Signal -> **Pin 6** ; 
+**Buzzer (Speaker)** - Signal -> **Pin 8** ; 
+**Ultrasonic Sensor** - Trigger (Trig) -> **Pin 9** ; 
+**Ultrasonic Sensor** - Echo -> **Pin 10**
 
-**Servo (Ohren)** - Signal -> **Pin 2**; 
-**RGB LED (Auge - Rot)** - Signal -> **Pin 3**; 
-**Servo (Schwanz)** - Signal -> **Pin 4**; 
-**RGB LED (Auge - Grün)** - Signal -> **Pin 5**; 
-**RGB LED (Auge - Blau)** - Signal -> **Pin 6**; 
-**Buzzer (Summer)** - Signal -> **Pin 8**; 
-**Ultraschallsensor** - Trigger (Trig) -> **Pin 9**; 
-**Ultraschallsensor** - Echo -> **Pin 10**; 
+## 🎭 PawPal Behavior (Based on Distance)
 
+### 🔴 Under 5 cm (Anger)
+* **Eyes:** Glow **Red**
+* **Sound:** Growls angrily
+* **Ears:** Flattened / laid back (10°)
+* **Tail:** Rigid / stiff (90°)
 
-## 🎭 Verhalten des Dackels (Je nach Abstand)
+### 🟡 5 cm to 10 cm (Joy)
+* **Eyes:** Glow **Yellow**
+* **Sound:** Barks happily
+* **Ears:** Raised up (80°)
+* **Tail:** Wags excitedly
 
-* **Unter 5 cm (Wut):** Augen leuchten **Rot**, der Dackel knurrt wütend, legt die Ohren an und macht den Schwanz starr.
-* **5 cm bis 10 cm (Freude):** Augen leuchten **Gelb**, er bellt fröhlich und wedelt aufgeregt mit dem Schwanz.
-* **10 cm bis 20 cm (Neugier):** Augen leuchten **Grün**, er macht ein überraschtes Geräusch und stellt die Ohren auf.
-* **20 cm bis 30 cm (Trauer):** Augen leuchten **Blau**, er jault leise und lässt die Ohren und den Schwanz hängen.
-* **Über 30 cm (Ruhemodus):** Augen leuchten **Cyan**, der Dackel verhält sich ruhig und wartet, bis sich ihm jemand nähert.
+### 🟢 10 cm to 20 cm (Curiosity)
+* **Eyes:** Glow **Green**
+* **Sound:** Makes a surprised double-bark
+* **Ears:** Fully alert / wide open (150°)
+* **Tail:** Wags gently
+
+### 🔵 20 cm to 30 cm (Sadness)
+* **Eyes:** Glow **Blue**
+* **Sound:** Whines softly
+* **Ears:** Drooping / hanging down (0°)
+* **Tail:** Tucked down (0°)
+
+### 🩵 Over 30 cm (Idle / Quiet Mode)
+* **Eyes:** Glow **Cyan**
+* **Behavior:** Stays calm and quiet, waiting for someone to approach
