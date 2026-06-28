@@ -33,5 +33,6 @@ double getDistance() {
     if (validSamples == 0) {
         return 0;
     }
+    
     return sum / validSamples;
 }
